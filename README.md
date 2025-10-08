@@ -2,7 +2,7 @@
 
 A TypeScript-strict React monorepo application to browse Chess.com Grandmasters with real-time activity tracking.
 
-**Live Demo:** https://chess-grandmasters.vercel.app
+**Live Demo:** [https://chess-grandmasters.vercel.app](https://coding-challenge-chess-gm-wiki-web-three.vercel.app)
 
 ---
 
