@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build --workspace=apps/web",
     "lint": "eslint .",
     "preview": "vite preview",
     "type-check": "tsc --noEmit"
