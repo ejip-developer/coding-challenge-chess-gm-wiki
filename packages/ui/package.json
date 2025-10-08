@@ -1,0 +1,27 @@
+{
+  "name": "@chess-gm/ui",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*.scss": "./src/*/*.module.scss"
+  },
+  "dependencies": {
+    "@chess-gm/types": "*",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "sass": "^1.69.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

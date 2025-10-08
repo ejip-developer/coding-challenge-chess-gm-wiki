@@ -1,0 +1,19 @@
+// Chess Theme Color Palette
+$chess-dark-square: #b58863;
+$chess-light-square: #f0d9b5;
+$chess-green: #769656;
+$chess-gold: #ffd700;
+$chess-board-border: #8b7355;
+
+// Bootstrap Overrides
+$primary: $chess-green;
+$secondary: $chess-dark-square;
+$success: #759656;
+$info: #5b9bd5;
+$warning: #f0c869;
+$danger: #c84548;
+
+// Theme colors
+$theme-background: #f8f9fa;
+$theme-text: #212529;
+$theme-card-bg: #ffffff;

@@ -1,0 +1,89 @@
+@import "@chess-gm/design-tokens";
+
+// Global resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-sans-serif;
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+
+  @include respond-to("mobile") {
+    padding: 1rem 0;
+  }
+}
+
+// Focus visible styles for accessibility
+:focus-visible {
+  outline: 3px solid $chess-green;
+  outline-offset: 2px;
+}
+
+// Remove default link styling
+a {
+  &:focus-visible {
+    outline: 3px solid $chess-green;
+    outline-offset: 2px;
+  }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $chess-light-square;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $chess-dark-square;
+  border-radius: 5px;
+
+  &:hover {
+    background: darken($chess-dark-square, 10%);
+  }
+}
+
+// Visually hidden utility
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

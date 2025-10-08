@@ -1,0 +1,53 @@
+@import "@chess-gm/design-tokens";
+
+.avatar,
+.avatarFallback {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid $chess-board-border;
+}
+
+.avatar {
+  &.sm {
+    width: 32px;
+    height: 32px;
+  }
+  &.md {
+    width: 48px;
+    height: 48px;
+  }
+  &.lg {
+    width: 80px;
+    height: 80px;
+  }
+  &.xl {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.avatarFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: $font-weight-bold;
+
+  &.sm {
+    @include avatar-fallback(32px);
+    font-size: 14px;
+  }
+  &.md {
+    @include avatar-fallback(48px);
+    font-size: 20px;
+  }
+  &.lg {
+    @include avatar-fallback(80px);
+    font-size: 32px;
+  }
+  &.xl {
+    @include avatar-fallback(128px);
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,65 @@
+@import "@chess-gm/design-tokens";
+
+.header {
+  background: linear-gradient(
+    135deg,
+    $chess-dark-square 0%,
+    darken($chess-dark-square, 15%) 100%
+  );
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.icon {
+  font-size: 3rem;
+  line-height: 1;
+
+  @include respond-to("mobile") {
+    font-size: 2.5rem;
+  }
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+
+  @include respond-to("mobile") {
+    font-size: 1.25rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+
+  @include respond-to("mobile") {
+    font-size: 0.75rem;
+  }
+}

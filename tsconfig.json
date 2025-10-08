@@ -1,0 +1,32 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/types" },
+    { "path": "packages/utils" },
+    { "path": "packages/api-client" },
+    { "path": "packages/store" },
+    { "path": "packages/ui" },
+    { "path": "apps/web" }
+  ],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@chess-gm/types": ["packages/types/src/index.ts"],
+      "@chess-gm/utils": ["packages/utils/src/index.ts"],
+      "@chess-gm/api-client": ["packages/api-client/src/index.ts"],
+      "@chess-gm/store": ["packages/store/src/index.ts"],
+      "@chess-gm/ui": ["packages/ui/src/index.ts"]
+    }
+  }
+}

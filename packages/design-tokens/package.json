@@ -1,0 +1,9 @@
+{
+  "name": "@chess-gm/design-tokens",
+  "version": "1.0.0",
+  "main": "./src/index.scss",
+  "exports": {
+    ".": "./src/index.scss",
+    "./themes/*": "./src/themes/*.scss"
+  }
+}

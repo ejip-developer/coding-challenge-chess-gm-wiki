@@ -1,0 +1,52 @@
+@import "@chess-gm/design-tokens";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid $chess-light-square;
+  border-top-color: $chess-green;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.piece {
+  font-size: 2rem;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.message {
+  color: $theme-text;
+  font-weight: $font-weight-medium;
+  margin: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

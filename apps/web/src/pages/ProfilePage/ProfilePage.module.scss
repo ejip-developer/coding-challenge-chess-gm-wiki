@@ -1,0 +1,124 @@
+@import "@chess-gm/design-tokens";
+
+.backButton {
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+
+  @include respond-to("mobile") {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.usernameTitle {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  margin: 0 0 0.5rem 0;
+  color: $theme-text;
+
+  @include respond-to("mobile") {
+    font-size: 1.5rem;
+  }
+}
+
+.realName {
+  font-size: 1.25rem;
+  color: lighten($theme-text, 30%);
+  margin-bottom: 1rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  @include respond-to("mobile") {
+    justify-content: center;
+  }
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: $theme-text;
+}
+
+.clockContent {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @include respond-to("mobile") {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.clockDisplay {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: $font-weight-bold;
+  color: $chess-green;
+  letter-spacing: 0.1em;
+
+  @include respond-to("mobile") {
+    font-size: 2rem;
+  }
+}
+
+.relativeTime {
+  font-family: $font-family-sans-serif; // Use regular font, not monospace
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  color: lighten($theme-text, 20%);
+
+  @include respond-to("mobile") {
+    font-size: 1.75rem;
+  }
+}
+
+.clockMeta {
+  text-align: right;
+
+  @include respond-to("mobile") {
+    text-align: left;
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.stat {
+  dt {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: $font-weight-normal;
+  }
+
+  dd {
+    color: $theme-text;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

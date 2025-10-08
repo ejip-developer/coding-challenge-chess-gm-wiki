@@ -1,0 +1,41 @@
+{
+  "name": "coding-challenge-chess-gm-wiki",
+  "version": "1.0.0",
+  "description": "Coding challenge - a wiki of Chess Grandmasters as defined by Chess.com.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "preview": "npm run preview --workspace=apps/web",
+    "build:all": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspace=apps/web",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules apps/*/dist packages/*/dist",
+    "clean:install": "npm run clean && npm install",
+    "type-check": "tsc --build --force",
+    "type-clean": "tsc -b --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "sass": "^1.93.2",
+    "typescript": "~5.9.3",
+    "typescript-plugin-css-modules": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejip-developer/coding-challenge-chess-gm-wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejip-developer/coding-challenge-chess-gm-wiki/issues"
+  },
+  "homepage": "https://github.com/ejip-developer/coding-challenge-chess-gm-wiki#readme"
+}
